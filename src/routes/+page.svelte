@@ -1,7 +1,14 @@
 <script lang="ts">
-    console.log('hello world');
-</script>
+    import { Svroller } from 'svrollbar'
+  
+    const items = Array.from({ length: 50 }).map((_, i) => `item ${i}`)
+  </script>
+  
+  <Svroller width="10rem" height="10rem">
+    <!-- <div style="height:100px; overflow: scroll;"> -->
 
-<h1>Hello world this is 1105 this is edit</h1>
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+        {#each items as item (item)}
+          <div>{item}</div>
+        {/each}
+    <!-- </div> -->
+  </Svroller>
